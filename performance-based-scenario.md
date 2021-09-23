@@ -19,7 +19,7 @@ title: "Sample Scenario"
 
 You have an application that needs to retrieve credentials from Vault, even though the application was **not** architected to interact directly with Vault. You need to securely configure Vault Agent Auto-Auth and token sink. 
 
-The `approle/` path has an `AppRole` auth method with the following properties:
+The `approle/` path has an `AppRole` authentication method with the following properties:
 - Role name: `appy7`
 - Vault policy: `policy7`
 - RoleID: `xxxxxxxx-xxxxxxxx-xxxxxxxx-xxxxxxxxxxx`
@@ -28,7 +28,7 @@ Use the information provided to:
 1. Configure the application server to use the Vault Agent to retrieve a Vault token. 
     - The Vault Agent should use AppRole for authentication.
     - Keep the token renewed automatically. 
-2. Use response-wrapping on the Auth method to protect the resulting token from Vault. 
+2. Use response wrapping on the auth method to protect the resulting token from Vault. 
 3. Write the token to the sink location. 
 
 ### Important Notes
